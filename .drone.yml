@@ -1,6 +1,6 @@
 ---
 kind: pipeline
-name: default
+name: build-amd64
 type: kubernetes
 
 platform:
@@ -16,9 +16,17 @@ steps:
     repo: psych0d0g/plex-media-server
     make: true
 
-- name: test
-  pull: never
-  image: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}:${DRONE_STAGE_TOKEN}
+- name: test-bin
+  pull: always
+  image: spritsail/docker-test
+  settings:
+    run: |
+      curl --version &&
+      xmlstarlet --version
+      
+#- name: test
+#  pull: never
+#  image: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}:${DRONE_STAGE_TOKEN}
 
 - name: publish
   pull: always
