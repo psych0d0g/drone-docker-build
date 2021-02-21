@@ -11,8 +11,11 @@ steps:
 - name: build
   pull: always
   image: psych0d0g/img-build
+  settings:
+    registry: https://harbor.k8s.crystalnet.org/
+    repo: psych0d0g/plex-media-server
+    make: true
 
-  # Build again, this time with the newly 'just-built' image, as a test
 - name: test
   pull: never
   image: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}:${DRONE_STAGE_TOKEN}
