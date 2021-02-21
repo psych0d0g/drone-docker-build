@@ -1,13 +1,13 @@
-ARG DOCKER_VER=20.10.2
+ARG DOCKER_VER=v0.3.8
 
-FROM docker:${DOCKER_VER}
+FROM jess/img:${DOCKER_VER}
 
 ARG VCS_REF
 ARG DOCKER_VER
 
-LABEL maintainer="Spritsail <docker-plugin@spritsail.io>" \
-      org.label-schema.vendor="Spritsail" \
-      org.label-schema.name="docker-build" \
+LABEL maintainer="Psych0d0g <h@xx0r.eu>" \
+      org.label-schema.vendor="Psych0d0g" \
+      org.label-schema.name="img-build" \
       org.label-schema.description="A Drone CI plugin for building and labelling Docker images" \
       org.label-schema.version=${VCS_REF} \
       io.spritsail.version.docker=${DOCKER_VER}
