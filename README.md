@@ -15,7 +15,7 @@ A plugin for [Drone CI](https://github.com/drone/drone) to build and label Docke
 
 ## Supported tags and respective `Dockerfile` links
 
-`latest` - [(Dockerfile)](https://github.com/spritsail/drone-docker-build/blob/master/Dockerfile)
+`latest` - [(Dockerfile)](https://github.com/psych0d0g/drone-img-build/blob/master/Dockerfile)
 
 ## Configuration
 
