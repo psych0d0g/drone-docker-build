@@ -10,7 +10,7 @@ platform:
 steps:
 - name: build
   pull: always
-  image: spritsail/docker-build
+  image: psych0d0g/img-build
 
   # Build again, this time with the newly 'just-built' image, as a test
 - name: test
@@ -21,7 +21,7 @@ steps:
   pull: always
   image: spritsail/docker-publish
   settings:
-    repo: spritsail/docker-build
+    repo: psych0d0g/img-build
     username:
       from_secret: docker_username
     password:
